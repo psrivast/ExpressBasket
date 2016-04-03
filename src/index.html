@@ -35,7 +35,7 @@
 						<div class="inner">
 							<h1>Express Basket</h1>
 							<p>
-								Express Basket will streamline the shopping experience in the grocery store and utilize localization to provide helpful functionality. This system utilizes scanners and load sensors to provide portable self checkout, and bluetooth beacons to localize indoors.
+								Express Basket will streamline the shopping experience in the grocery store and utilize localization to provide helpful functionality. This system utilizes scanners and load sensors to provide portable self checkout.
 							</p>
 						</div>
 					</section>
@@ -107,9 +107,7 @@
 							<ul>
 								<li>Raspberry Pi (micro-controller)</li>
 								<li>Pressure/Weight sensor</li>
-								<li>RFID Tags</li>
 								<li>NFC Terminal</li>
-								<li>BLE Beacons</li>
 								<li>Bluetooth module for microcontroller</li>
 								<li>Battery</li>
 								<li>USB Type-C Fast charging cables/adapter</li>
@@ -141,18 +139,18 @@
 					</section>
 
 				<!-- Tech Specs -->
-					<section id="specs" class="wrapper style1 fade-up">
+					<section id="specs" class="wrapper style2 fade-up">
 						<div class="inner">
 							<h1>System Description</h1>
 							<h2>Smart Basket</h2>
-							<p>The Smart Basket will carry onboard a micro-controller, a load sensor, a bluetooth transceiver, as well as an NFC transceiver. 
-</p>
+							<p>The Smart Basket will carry onboard a micro-controller, a load sensor, a bluetooth transceiver, as well as an NFC transceiver.</p>
+
 							<h3>Microcontroller</h3>
 							<p>The microcontroller will be used to orchestrate the usage of all of the sensors and communication with transmitters. It will read and write data from the load sensor, bluetooth transceiver, and NFC transceiver.</p>
 							
 							<h3>Load Sensor</h3>
-							<p>The load sensor will be able to detect a range of weights. It will communicate its observed weights to the microcontroller.
-</p>
+							<p>The load sensor will be able to detect a range of weights. It will communicate its observed weights to the microcontroller.</p>
+
 							<h3>Bluetooth Transceiver</h3>
 							<p>The bluetooth transceiver will communicate the observed weights from the load sensor to the mobile phone. The bluetooth transceiver will also communicate the existence of nearby BLE beacons for indoor localization.</p>
 
@@ -160,28 +158,23 @@
 							<p>The NFC transceiver will communicate directly with the phone to link the phone to the cart via bluetooth, as well as for checking out using Android Pay. </p>
 
 							<h3>Power</h3>
-							<p>The Smart Basket will be powered by an onboard battery that is charged using the USB Type-C fast charging specifications. We will also charge the user’s phone on the same battery. 
-</p>
+							<p>The Smart Basket will be powered by an onboard battery that is charged using the USB Type-C fast charging specifications. We will also charge the user’s phone on the same battery.</p>
 							<h2>Mobile Application</h2>
-							<p>We will develop a native Android mobile application to easily allow users to interact with the Smart Basket.
-</p>
+							<p>We will develop a native Android mobile application to easily allow users to interact with the Smart Basket.</p>
+
 							<h3>Barcode Scanner</h3>
-							<p>The application will feature a barcode scanner so the system can easily identify the product and obtain its correct weight. This requires the mobile device in question to have a camera.
-</p>
+							<p>The application will feature a barcode scanner so the system can easily identify the product and obtain its correct weight. This requires the mobile device in question to have a camera.</p>
+
 							<h3>Virtual Cart</h3>
-							<p>The mobile application will also maintain a list of items that have been checked into the cart known as the virtual cart. It will list items as well as the current total of the cart. Users will be able to remove items from their virtual cart, by interacting with the app.
-</p>
+							<p>The mobile application will also maintain a list of items that have been checked into the cart known as the virtual cart. It will list items as well as the current total of the cart. Users will be able to remove items from their virtual cart, by interacting with the app.</p>
 							<h3>NFC Payment (Android Pay)</h3>
 							<p>We will be integrating Android Pay to ease the user’s checkout experience. By leveraging the built-in security of the device, we aim to have an extremely secure point of sale.</p>
 
 							<h3>Basket Integration</h3>
-							<p>The application will communicate with the basket via bluetooth. When the app scans a barcode, it will record the item’s expected weight, then let the user and the basket that the product should be weighed. Upon weighing the product the microcontroller will read from the weight sensor and report the weight via the bluetooth transceiver back to the phone. The phone will then verify the actual weight by comparing it to the expected weight of the product. If the product is of the correct weight, the product is added to the virtual cart. The basket will also alert the phone of nearby BLE beacons so the phone can determine its location in the store.
-</p>
+							<p>The application will communicate with the basket via bluetooth. When the app scans a barcode, it will record the item’s expected weight, then let the user and the basket that the product should be weighed. Upon weighing the product the microcontroller will read from the weight sensor and report the weight via the bluetooth transceiver back to the phone. The phone will then verify the actual weight by comparing it to the expected weight of the product. If the product is of the correct weight, the product is added to the virtual cart.</p>
+							
 							<h3>Routing</h3>
-							<p>For navigating the user through the store we plan on implementing a simple algorithm. Organize the user’s shopping list by aisle, then tell them to traverse the store by the aisles they need to access in order to get everything they need.
-</p>
-							<h2>Bluetooth Beacons</h2>
-							<p>Finally for localization, there will be BLE beacons spread throughout the store that emit their location that the basket will connect to determine its location. The information is passed to the BLE transceiver on the basket and then communicated to the mobile application.</p>
+							<p>For navigating the user through the store we plan on implementing a simple algorithm. Organize the user’s shopping list by aisle, then tell them to traverse the store by the aisles they need to access in order to get everything they need.</p>
 						</div>
 					</section>
 
@@ -189,7 +182,7 @@
 			</div>
 
 		<!-- Footer -->
-			<footer id="footer" class="wrapper style2">
+			<footer id="footer" class="wrapper style3">
 				<div class="inner">
 					<ul class="menu">
 						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
