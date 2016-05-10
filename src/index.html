@@ -146,26 +146,35 @@
 					<section id="specs" class="wrapper style2 fade-up">
 						<div class="inner">
 							<h1>System Description</h1>
-							<ul class="img-list">
-							<li>
-								<img src="images/hardware.jpg" alt="" height="500px" width="690px">
-							</li>
-						</ul>
-							<h2>Smart Basket</h2>
-							<p>The Smart Basket will carry onboard a micro-controller, a load sensor, a bluetooth transceiver, as well as an NFC transceiver.</p>
+							<div>
+							 	<img class="centered-image" src="images/hardware.jpg" width="700px" height="500px" display="block" />
+							</div>
+							<ol>
+								<li>
+									Load Sensor: The load sensor will be able to detect a range of weights. It will communicate its observed weights to the microcontroller.
+								</li>
+								<li>
+									Scale: a piece of acrylic is secured over the load sensors to distribute the weight evenly
+								</li>
+								<li>
+									Power: The Smart Basket will be powered by an onboard battery that is charged using the USB Type-C fast charging specifications. We will also charge the user’s phone on the same battery. 								
+								</li>
+								<li>
+									Hx711 Amplifier: a small breakout board for the HX711 IC that reads the changes in the resistance of the load cell in order to calibrate and get accurate weight measurements
 
-							<h3>Microcontroller</h3>
-							<p>The microcontroller will be used to orchestrate the usage of all of the sensors and communication with transmitters. It will read and write data from the load sensor, bluetooth transceiver, and NFC transceiver.</p>
+								</li>
+								<li>
+									Load Sensor Combinator: bare PCB that combines four load sensors into a standard 4-wire wheatstone configuration
+								</li>
+								<li>
+									Microcontroller: The microcontroller will be used to orchestrate the usage of all of the sensors and communication with transmitters. It will read and write data from the load sensor, and bluetooth transceiver. 
+								</li>
+							</ol>
 							
-							<h3>Load Sensor</h3>
-							<p>The load sensor will be able to detect a range of weights. It will communicate its observed weights to the microcontroller.</p>
-
-							<h3>Power</h3>
-							<p>The Smart Basket will be powered by an onboard battery that is charged using the USB Type-C fast charging specifications. We will also charge the user’s phone on the same battery.</p>
 							<h2>Mobile Application</h2>
-							<li>
-								<img src="images/software.jpg" alt="" height="350px" width="550px">
-							</li>
+							<div>
+							 	<img class="centered-image" src="images/software.jpg" width="700px" height="300px" display="block" />
+							</div>
 							<p>We will develop a native Android mobile application to easily allow users to interact with the Smart Basket.</p>
 
 							<h3>Barcode Scanner</h3>

@@ -27,6 +27,13 @@
   opacity: 1;
 }
 
+img.centered-image{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
 ul.img-list {
   list-style-type: none;
   margin: 0;
