@@ -1,0 +1,65 @@
+.competitor-image {
+	position: relative;
+	width: 350px;
+	height: 350px;
+}
+
+.competitor-imageHoverText {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(153, 153, 153, 0.72);
+  color: #fff;
+
+
+  visibility: hidden;
+  opacity: 0;
+
+  /*remove comment if you want a gradual transition between states
+  -webkit-transition: visibility opacity 0.2s;
+  */
+}
+
+.competitor-image:hover .competitor-imageHoverText {
+  visibility: visible;
+  opacity: 1;
+}
+
+ul.img-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul.img-list li {
+  display: inline-block;
+  height: 350px;
+  width: 350px;
+  margin: 0 1em 1em 0;
+  position: relative;
+}
+
+span.hover-text {
+  background: rgba(0,0,0,0.75);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 350px;
+  position: absolute;
+  top: 0;
+  width: 350px;
+  opacity: 0;
+}
+
+span.hover-text span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+
+ul.img-list li:hover span.hover-text {
+  opacity: 1;
+}
