@@ -8,6 +8,7 @@
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/my.css" />
+		<link rel="icon" href="http://files.softicons.com/download/business-icons/free-e-commerce-icons-by-design-bolts/png/256x256/Shopping-Basket-Icon.png">
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 	</head>
@@ -25,7 +26,7 @@
 							<li><a href="#specs">Tech Specs</a></li>
 							<li><a href="#architecture">Architecture</a></li>
 							<li><a href="#use_cases">Use Cases</a></li>
-							<li><a href="#pictures">Pictures</a></li>
+							<li><a href="#team">Team</a></li>
 						</ul>
 					</nav>
 				</div>
@@ -41,8 +42,9 @@
 							<p>
 								Express Basket streamlines the grocery shopping experience by utilizing scanners and load sensors to provide a portable self-checkout.
 							</p>
-
-							<iframe width="840" height="630"src="https://youtube.com/embed/f6VKyTR824A"></iframe>
+							<div id="centered-video">
+								<iframe width="960" height="540"src="https://youtube.com/embed/f6VKyTR824A"></iframe>
+							</div>
 						</div>
 					</section>
 
@@ -57,51 +59,41 @@
 					</section>
 
 				<!-- Competitors -->
-					<section id="competitors" class="wrapper style3 fullscreen fade-up">
+					<section id="competitors" class="wrapper style3 spotlights fade-up">
 						<div class="inner">
-							<h1>Competitive Analysis</h1>
-							<ul class="img-list">
-								<li>
-									<a href="http://www.wired.com/2012/02/shoppingcart/">
-										<img src="images/smartercart.jpg" alt="" height="350px" width="350px">
-										<span class="hover-text"><span>
-											<div class="inner">
-												<h2> Board of Awesomeness </h2>
-													<p>Samsung tablet and Microsoft Kinect used to track shoppers</p>
-													<p>Express Basket tackles the same problem while also providing the portable self checkout experience.</p>
-													
-											</div>
-										</span></span>
-									</a>
-								</li>
-								<li>
-									<a href="http://www.bloomberg.com/ss/09/06/0608_grocery_innovation/8.htm">
-										<img src="images/shopandstop.jpg" alt="" height="350px" width="350px">
-										<span class="hover-text"><span>
-											<div class="inner">
-												<h2> Shopping Buddy </h2>
-													<p>Includes a tablet that allows the user to browse all of the grocery store items and scanner to eliminate the checkout process</p>
-													<p>Express Basket's interface is on a smartphone application which will provide the user with a more familiar interface and save on costs.</p>
-													
-											</div>
-										</span></span>
-									</a>
-								</li>
-								<li>
-									<a href="https://en.wikipedia.org/wiki/Self-checkout">
-										<img src="images/selfcheckout.jpg" alt="" height="350px" width="350px">
-										<span class="hover-text"><span>
-											<div class="inner">
-												<h2> Self-Checkout </h2>
-													<p>Standard self-checkout technology that exists at most grocery stores</p>
-													<p>Express Basket aims to mobilize this experience and utilize localization to provide useful functionality.</p>
-													
-											</div>
-										</span></span>
-									</a>
-								</li>
-							</ul>
+						<h1>Competitors</h1>
 						</div>
+						<section class="spotlight">
+							<div class="image"><img src="images/smartercart.jpg" alt="" /></div><div class="content">
+								<h3>Board of Awesomeness</h3>
+								<ul>
+									<li>Samsung tablet and Microsoft Kinect used to track shoppers</li>
+									<li>Express Basket tackles the same problem while also providing the portable self checkout experience.</li>
+									<li>The lack of tags makes Express Basket a more viable solutions especially in grocery stores</li>
+								</ul>
+							</div>
+						</section>
+						<section class="spotlight">
+								<div class="content">
+									<h3> Shopping Buddy </h3>
+									<ul>
+										<li>Includes a tablet that allows the user to browse all of the grocery store items and scanner to eliminate the checkout process</li>
+										<li>Express Basket's interface is on a smartphone application which will provide the user with a more familiar interface and save on costs.</li>
+									</ul>
+								</div>
+								<div class="image"><img src="images/shopandstop.jpg" alt="" /></div>
+							</a>
+						</section>
+						<section class="spotlight">
+								<div class="image"><img src="images/selfcheckout.jpg" alt="" /></div>
+								<div class="content">
+									<h3>Standard Self Checkout</h3>
+									<ul>
+										<li>Standard self-checkout technology that exists at most grocery stores</li>
+										<li>Express Basket aims to mobilize this experience and utilize localization to provide useful functionality.</li>
+									</ul>
+								</div>
+						</section>
 					</section>
 
 				<!-- Requirements -->
@@ -144,37 +136,65 @@
 					<section id="specs" class="wrapper style2 fade-up">
 						<div class="inner">
 							<h1>System Description</h1>
+							<h2>Hardware Components</h2>
 							<div>
 							 	<img class="centered-image" src="images/hardware.jpg" width="700px" height="500px" display="block" />
 							</div>
 							<ol>
-								<li>
-									Load Sensor: The load sensor will be able to detect a range of weights. It will communicate its observed weights to the microcontroller.
-								</li>
-								<li>
-									Scale: a piece of acrylic is secured over the load sensors to distribute the weight evenly
-								</li>
-								<li>
-									Power: The Smart Basket will be powered by an onboard battery that is charged using the USB Type-C fast charging specifications. We will also charge the user’s phone on the same battery. 								
-								</li>
-								<li>
-									Hx711 Amplifier: a small breakout board for the HX711 IC that reads the changes in the resistance of the load cell in order to calibrate and get accurate weight measurements
-
-								</li>
-								<li>
-									Load Sensor Combinator: bare PCB that combines four load sensors into a standard 4-wire wheatstone configuration
-								</li>
-								<li>
-									Microcontroller: The microcontroller will be used to orchestrate the usage of all of the sensors and communication with transmitters. It will read and write data from the load sensor, and bluetooth transceiver. 
-								</li>
+								<h3>
+									<li>
+										Load Sensor
+									</li>
+								</h3>
+								<p>
+									The load sensor will be able to detect a range of weights. It will communicate its observed weights to the microcontroller.
+								</p>
+								<h3>
+									<li>
+										Scale
+									</li>
+								</h3>
+								<p>
+									A piece of acrylic is secured over the load sensors to distribute the weight evenly
+								</p>
+								<h3>
+									<li>
+										Power
+									</li>
+								</h3>
+								<p>
+									The Smart Basket will be powered by an onboard battery that is charged using the USB Type-C fast charging specifications. We will also charge the user’s phone on the same battery.
+								</p>
+								<h3>
+									<li>
+										Hx711 Amplifier
+									</li>
+								</h3>
+								<p>
+									A small breakout board for the HX711 IC that reads the changes in the resistance of the load cell in order to calibrate and get accurate weight measurements
+								</p>
+								<h3>
+									<li>
+										Load Sensor Combinator
+									</li>
+								</h3>
+								<p>
+									Bare PCB that combines four load sensors into a standard 4-wire wheatstone configuration
+								</p>
+								<h3>
+									<li>
+										Microcontroller
+									</li>
+								</h3>
+								<p>
+									The microcontroller will be used to orchestrate the usage of all of the sensors and communication with transmitters. It will read and write data from the load sensor, and bluetooth transceiver.
+								</p>
 							</ol>
-							
+							<br>
 							<h2>Mobile Application</h2>
 							<div>
 							 	<img class="centered-image" src="images/software.jpg" width="700px" height="300px" display="block" />
 							</div>
-							<p>We will develop a native Android mobile application to easily allow users to interact with the Smart Basket.</p>
-
 							<h3>Barcode Scanner</h3>
 							<p>The application will feature a barcode scanner so the system can easily identify the product and obtain its correct weight. This requires the mobile device in question to have a camera.</p>
 
@@ -192,65 +212,68 @@
 					<section id="architecture" class="wrapper style3 fade-up">
 						<div class="inner">
 						<h1>System Architecture</h1>
-						<ul class="img-list">
-							<li>
-								<img src="images/architecture.jpg" alt="" height="350px" width="650px">
-							</li>
-						</ul>
+						<img class="centered-image" src="images/architecture.jpg" alt="" height="350px" width="650px">
 						</div>
 					</section>
 
 				<!-- Use Cases -->
 					<section id="use_cases" class="wrapper style1 fade-up">
+
 						<div class="inner">
 						<h1>Use Cases</h1>
-						<ul class="img-list">
-							<li>
-								<img src="images/use_cases/initial_interaction.png" alt="" height="450px" width="350px">
-							</li>
-							<li>
-								<img src="images/use_cases/item_addition.png" alt="" height="450px" width="350px">
-							</li>
-							<li>
-								<img src="images/use_cases/item_removal.png" alt="" height="450px" width="350px">
-							</li>
-							<li>
-								<img src="images/use_cases/checkout.png" alt="" height="450px" width="350px">
-							</li>
-						</ul>
+						<table>
+								<tr>
+									<td align="center">
+										<div class="floated_img">
+										    <img src="images/use_cases/initial_interaction.png" alt="" height="350px" width="350px">
+										    <h3>Initial Interaction</h3>
+										</div>
+									</td>
+									<td align="center">
+										<div class="floated_img">
+										    <img src="images/use_cases/item_addition.png" alt="" height="350px" width="350px">
+										    <h3>Adding Item</h3>
+										</div>		
+									</td>
+								</tr>
+								<tr>
+									<td align="center">
+										<div class="floated_img">
+										    <img src="images/use_cases/item_removal.png" alt="" height="350px" width="350px">
+										    <h3>Removing Item</h3>
+										</div>	
+									</td>
+									<td align="center">
+										<div class="floated_img">
+										    <img src="images/use_cases/Checkout.png" alt="" height="350px" width="350px">
+										    <h3>Checkout</h3>
+										</div>	
+									</td>
+								</tr>
+							</table>
 						</div>
 					</section>
 
 				<!-- Pictures -->
-					<section id="pictures" class="wrapper style2 fade-up">
+					<section id="team" class="wrapper style2 fade-up">
 						<div class="inner">
-						<h1>Pictures</h1>
-						<ul class="img-list">
-							<li>
-								<img src="images/basket_front.JPG" alt="" height="350px" width="370px">
-							</li>
-							<li>
-								<img src="images/basket_top.JPG" alt="" height="400px" width="320px">
-							</li>
-						</ul>
+							<h1>Team</h1>
+							<div>
+								<img class="centered-image" src="images/swag.png" alt="" height="300px" width="900px">
+							</div>
 						</div>
 					</section>	
-
-
 			</div>
 
 		<!-- Footer -->
-			<footer id="footer" class="wrapper style4">
+			<footer id="footer" class="wrapper style3">
 				<div class="inner">
 					<ul class="menu">
 						<li>
-						<img src="images/carnegie_mellon.jpg" alt="" height="100px" width="300px">
+						<img class="centered-image" src="images/cmu.png" alt="" height="75px" width="400px">
 						</li>
 						<li>
-						<img src="images/swag.png" alt="" height="100px" width="300px">
-						</li>
-						<li>
-						<img src="images/ece.png" alt="" height="100px" width="300px">
+						<img class="centered-image" src="images/ece.png" alt="" height="75px" width="400px">
 						</li>
 					</ul>
 				</div>

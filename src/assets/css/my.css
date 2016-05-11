@@ -27,12 +27,26 @@
   opacity: 1;
 }
 
+.floated_img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+}
+
 img.centered-image{
   display: block;
   margin-left: auto;
   margin-right: auto;
-
+  border-radius: 10px;
 }
+`
+iframe {
+  display: block;
+  margin: 0 auto;
+}
+
+
 
 ul.img-list {
   list-style-type: none;
